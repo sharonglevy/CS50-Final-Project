@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    First Buddy
+{% endblock %}
+
+{% block main %}
+    <h1>How does it work?</h1>
+    <p>Modify the field that you need and we'll take care of the rest! Your buddies will see your updated information</p>
+    <form action="/changeMyData" method="post">
+        <div id = "form">
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Adress</label>
+                    <textarea type="Adress" class="form-control" id="Adress" name = "Adress" placeholder="Adress" rows="1">{{adress}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Country</label>
+                    <textarea type="Country" class="form-control" id="Country" name = "country" placeholder="Country" rows="1">{{country}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">City</label>
+                    <textarea type="City" class="form-control" id="City" name = "city" placeholder="City" rows="1">{{city}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Town</label>
+                    <textarea type="Town" class="form-control" id="Town" name = "town" placeholder="Town" rows="1">{{town}}</textarea>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <textarea type="email" class="form-control" id="email" name = "Email" placeholder="Email Adress" rows="1">{{email}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Contact number</label>
+                    <textarea type="celNum" class="form-control" id="cell" name = "Contact Num" placeholder="Cellphone number" rows="1">{{cellNum}}</textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Something about you</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name = "aboutMe" rows="3">{{aboutMe}}</textarea>
+                </div>
+                <button id = "submit" class="btn btn-primary" type="submit">Update data</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    First Buddy
+{% endblock %}
+
+{% block main %}
+    <h1>How does it work?</h1>
+    <p>Thanks for showing interest in helping in times of need, the process is very simple, to start we'll ask you to fill a form so we can match you with the perfect Buddy</p>
+    <form action="/FirstBuddy" method="post">
+        <div id = "form">
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Full name</label>
+                    <input type="FullName" class="form-control" id="FullName" name = "FullName" placeholder="Full name">
+                </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Adress</label>
+                    <input type="Adress" class="form-control" id="Adress" name = "Adress" placeholder="Adress">
+                </div>
+                </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Country</label>
+                    <input type="Country" class="form-control" id="Country" name = "country" placeholder="Country">
+                </div>
+                </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">City</label>
+                    <input type="City" class="form-control" id="City" name = "city" placeholder="City">
+                </div>
+                </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Town</label>
+                    <input type="Town" class="form-control" id="Town" name = "town" placeholder="Town">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name = "Email" placeholder="Email Adress">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Contact number</label>
+                    <input type="celNum" class="form-control" id="cell" name = "Contact Num" placeholder="Cellphone number">
+                </div>
+
+                <label for="exampleDataList" class="form-label">Helper or need help?</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList" name = "HorN" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                  <option value="Helper">
+                  <option value="Need help">
+                </datalist>
+                <label for="exampleDataList2" class="form-label">Over the phone or in person??</label>
+                <input class="form-control" list="datalistOptions2" id="exampleDataList2" name = "Person/Phone" placeholder="Type to search...">
+                <datalist id="datalistOptions2">
+                  <option value="Over the phone">
+                  <option value="In person">
+                </datalist>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Something about you</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name = "aboutMe" rows="3"></textarea>
+                </div>
+                <button id = "submit" class="btn btn-primary" type="submit">Register</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

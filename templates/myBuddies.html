@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <p class = "title">
+        {{message}}
+    </p>
+    {% for row in rows %}
+            <div class = navbar-toggler>
+                <div class = tm-contact>
+                    <div>Buddy name: {{row["BUDDY"]}}</div>
+                    <p class="title">City: {{row["city"]}}</p>
+                    <p class="title">About me: {{row["aboutMe"]}}</p>
+                    <p>Contact:</p>
+                    <p class="title">Email: {{row["email"]}}</p>
+                    <p class="title">Cell number: {{row["number"]}}</p>
+                </div>
+                <div>------------------------------------------------------------------------------------------</div>
+            </div>
+    {% endfor %}
+{% endblock %}
